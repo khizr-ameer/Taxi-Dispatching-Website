@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 100px; /* Add padding to avoid being hidden under the navbar */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-top: 0; /* Ensure there is no margin that might push it under the navbar */
+}
+
+.testimonial-item {
+    margin-bottom: 40px;
+}
+
+.testimonial-content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial-content:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-content img {
+    max-width: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Optional: Make the image circular */
+}
+
+.testimonial-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.testimonial-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .testimonial-content {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar nav {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .testimonial-content h3 {
+        font-size: 18px;
+    }
+
+    .testimonial-content p {
+        font-size: 14px;
+    }
+}

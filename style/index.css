@@ -1,0 +1,400 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 650;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.bookdemo {
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bookdemo:hover {
+    background-color: #cc9900;
+}
+
+/* PC Navbar */
+.navbar-pc {
+    display: block;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+/* Mobile Navbar */
+.menu-toggle {
+    display: none;
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle:hover {
+    background-color: #cc9900;
+}
+
+/* Toggle Close Button */
+.menu-toggle.close {
+    background-color: #ffcc00; /* Yellow shade */
+    color: #fff; 
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle.close:hover {
+    background-color: #cc9900; 
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .navbar-pc {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .bookdemo {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+/* Main Image Section */
+.main-image {
+    position: relative;
+    height: 100vh; /* Adjusted to cover full viewport height */
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    background: rgba(48, 48, 48, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.image-caption h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.image-caption p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Our Services Section */
+.our-services {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.service-items {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item img {
+    width: 50%;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Software We Use Section */
+.software-used {
+    margin-top: 30px;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.logo-items {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-item img {
+    max-width: 120px;
+    max-height: 70px;
+}
+
+/* WhatsApp Logo Styles */
+.whatsapp-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #ccc;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+/* Trademark Styles */
+.trademark {
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+    .main-image {
+        height: 50vh;
+    }
+
+    .image-caption {
+        width: 90%;
+    }
+
+    .service-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-image {
+        height: 40vh;
+    }
+
+    .image-caption {
+        width: 100%;
+        padding: 10px;
+        
+        background: rgba(48, 48, 48, 0.4); /* Lighter background for smaller devices */
+    }
+
+    .image-caption h2 {
+        font-size: 28px;
+    }
+
+    .image-caption p {
+        font-size: 16px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .bookdemo {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .main-image {
+        height: 50vh;
+        width: auto;
+    }
+
+    .image-caption {
+        margin-top: 10px;
+        font-size: 16px;
+        background: rgba(48, 48, 48, 0.3); /* Even lighter background for very small devices */
+    }
+ 
+    .service-item {
+        padding: 15px;
+    }
+
+    .service-item h3 {
+        font-size: 20px;
+    }
+
+    .service-item p {
+        font-size: 14px;
+    }
+
+    .logo-item img {
+        max-width: 80px;
+        max-height: 50px;
+    }
+}
+ 

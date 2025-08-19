@@ -1,0 +1,27 @@
+/* About Us Section */
+.about-us {
+    margin-top: 160px;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center; /* Center align content */
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center; /* Center align paragraph text */
+}
+
+.about-us ul {
+    list-style-type: disc;
+    list-style-type: none;
+    margin-left: 20px;
+}
